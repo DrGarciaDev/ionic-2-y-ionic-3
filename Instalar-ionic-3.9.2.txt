@@ -1,0 +1,53 @@
+Si ya se tiene instalado ionic superior al 3.9.2 que es superior al del curso, 
+se puede desinstalar la versión superior como administrador con: 
+
+npm uninstall -g ionic
+
+e instalar el 3.9.2 con
+ 
+npm install -g ionic@3.9.2
+
+Por razones que desconozco, se producían errores al tratar de crear una aplicación con ionic 3.9.2
+por lo que desisntalé con 
+
+npm uninstall -g ionic
+
+e hice una instalación con 
+
+npm install -g ionic cordova
+
+Pedí una lista de las versiones instaladas
+
+	ionic info
+	[WARN] You are not in an Ionic project directory. Project context may be missing.
+
+	Ionic:
+
+   		Ionic CLI : 5.2.3
+
+	Utility:
+
+   		cordova-res : not installed
+		native-run  : not installed
+
+	System:
+
+   		NodeJS : v10.16.0
+		npm    : 6.9.0
+		OS     : Windows 10
+
+En el directorio donde se crearía la aplicación ejecuté el comando
+
+ionic start myApp tabs --type=ionic-angular
+
+entré a myApp y ejecuté: 
+
+ionic serve
+
+Despues se agrega la pagina login automaticamente con el comando generate
+
+ionic g page login
+
+y se agrega un provider con 
+
+ionic g provider usuario
