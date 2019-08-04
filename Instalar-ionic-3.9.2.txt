@@ -51,3 +51,20 @@ ionic g page login
 y se agrega un provider con 
 
 ionic g provider usuario
+
+para generara las carpetas de la plataforma para android se usa el siguiente comando:
+
+ionic cordova platform add android
+
+Para los casos en los que se tienen errores de instalación de la plataforma, 
+el tutor sugiere utilizar comandos para corregir errores, a manera de reinicio de la instalación 
+o creación de las carpetas de la plataforma android:
+
+ionic cordova platform remove android
+ionic cordova platform add android@6.4.0
+ionic cordova build android
+
+Se instala cordova-res porque dio errores y se sugiere en consola instalarlo
+
+npm i -g cordova-res
+ionic cordova resources android --force
