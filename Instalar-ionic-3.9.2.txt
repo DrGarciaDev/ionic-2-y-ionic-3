@@ -1,20 +1,20 @@
 Si ya se tiene instalado ionic superior al 3.9.2 que es superior al del curso, 
 se puede desinstalar la versión superior como administrador con: 
 
-npm uninstall -g ionic
+	npm uninstall -g ionic
 
 e instalar el 3.9.2 con
  
-npm install -g ionic@3.9.2
+	npm install -g ionic@3.9.2
 
 Por razones que desconozco, se producían errores al tratar de crear una aplicación con ionic 3.9.2
 por lo que desisntalé con 
 
-npm uninstall -g ionic
+	npm uninstall -g ionic
 
 e hice una instalación con 
 
-npm install -g ionic cordova
+	npm install -g ionic cordova
 
 Pedí una lista de las versiones instaladas
 
@@ -38,33 +38,34 @@ Pedí una lista de las versiones instaladas
 
 En el directorio donde se crearía la aplicación ejecuté el comando
 
-ionic start myApp tabs --type=ionic-angular
+	ionic start myApp tabs --type=ionic-angular
 
 entré a myApp y ejecuté: 
 
-ionic serve
+	ionic serve
 
 Despues se agrega la pagina login automaticamente con el comando generate
 
-ionic g page login
+	ionic g page login
 
 y se agrega un provider con 
 
-ionic g provider usuario
+	ionic g provider usuario
 
 para generara las carpetas de la plataforma para android se usa el siguiente comando:
 
-ionic cordova platform add android
+	ionic cordova platform add android
 
 Para los casos en los que se tienen errores de instalación de la plataforma, 
 el tutor sugiere utilizar comandos para corregir errores, a manera de reinicio de la instalación 
 o creación de las carpetas de la plataforma android:
 
-ionic cordova platform remove android
-ionic cordova platform add android@6.4.0
-ionic cordova build android
+	ionic cordova platform remove android
+	ionic cordova platform add android@6.4.0
+	ionic cordova build android
 
 Se instala cordova-res porque dio errores y se sugiere en consola instalarlo
 
-npm i -g cordova-res
-ionic cordova resources android --force
+	npm i -g cordova-res
+	ionic cordova resources android --force
+
