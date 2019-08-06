@@ -69,3 +69,28 @@ Se instala cordova-res porque dio errores y se sugiere en consola instalarlo
 	npm i -g cordova-res
 	ionic cordova resources android --force
 
+Comandos para cambiar a la versión Pro y a la Legacy
+
+Asegurémonos de trabajar con la versión PRO
+
+Ejecuten este comando como ROOT, SuperUsuario o Administrador
+
+	ionic config set -g backend pro 
+
+
+En caso que por alguna razón necesiten la versión legacy (vieja) de ionic, ejecuten este comando como ROOT, Super Usuario o Administrador
+
+	ionic config set -g backend legacy 
+
+
+
+
+SE VUELVE A DESINSTALAR IONIC CON
+	npm unistall -g ionic
+	npm cache clean --force
+	npm install -g ionic@3.9.2
+
+SE INSTALAN LOS SIGUIENTES PAQUETES PARA TRATAR DE SOLUCIONAR EL ERROR AL TRATAR DE CREA LA APLICACION DE SONIDOS
+	npm install --global --production windows-build-tools
+	npm install --global node-gyp
+
