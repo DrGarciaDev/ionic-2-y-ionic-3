@@ -1,0 +1,54 @@
+PREGUNTA CON RESPUESTA UTIL
+	Es posible trabajar con Entornos Virtuales de Node como en Python?
+	Cristian Javier · Clase 5
+	· hace 11 días
+
+	Vengo de trabajar, de hecho lo sigo haciendo, con Python. En Python existe el concepto de "Entornos Virtuales de Python" en los cuales 	uno puede aislar cada proyecto (carpeta) en un entorno aislado con su correspondiente versión de Python y paquetes particulares. Lo cual 	permite dejar la instalacion global de Python del SO instacta y probar nuevas versiones o seguir trabajando con versiones de paquetes 	distintos sin hacer migraciones que pueden derivar en errores.
+
+	Hay alguna forma en Node, me imagino que si, de trabajar con entornos virtuales de Node o de hacer lo mismo de otra forma? Veo que hay un 	packaje.json en el proyecto que tiene información de los paquetes instalados pero hablo desde una perpectiva de instalacion a nivel de 	carpeta y no global.
+
+	Lo pienso para poder tener instalado la ultima versión de node e ionic por ejemplo a nivel global para ver sus últimas características y 	en la carpeta del proyecto instalar la versión de ionic que necesitamos, la 3.9.2, como sugiere Fernando, y trabajar con ella para seguir 	el curso de forma mas fluida.
+	Jose Cardenas
+	
+	Jose — Profesor asistente · hace 10 días
+
+	Hola Cristian.
+
+	Si se puede lograr. Para tu proyecto del curso puedes ejecutar ubicado en el directorio:
+	
+	    npm install ionic@3.9.2 --save
+	
+	Y de manera global:
+	
+	    npm install -g ionic@latest
+
+De esta manera podrás tener la version 3.9.2 de manera local para el proyecto y la última versión de manera global.
+
+Saludos.
+
+
+************************************************************************************************************************************************
+
+JH
+******************SOLUCIÓN a los que no pueden levantar el app****************
+Jesús Fonseca · Clase 36
+· hace 2 meses
+
+Explicación:
+
+ejecute los siguientes comandos y listo:
+
+	npm i -D -E
+
+ESPERE
+
+ionic serve
+
+LISTO.
+
+Jose Cardenas
+Jose — Profesor asistente · hace 2 meses
+
+Hola Jesús.
+
+Excelente, gracias por compartir esta solución. 
