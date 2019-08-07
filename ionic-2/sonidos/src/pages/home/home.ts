@@ -16,7 +16,7 @@ export class HomePage {
   audioTiempo: any;
 
   constructor() {
-    this.animales = ANIMALES.splice(0);
+    this.animales = ANIMALES.slice(0);
   }
 
   // Funcion para reproducir audio desde los botones del home
@@ -54,7 +54,10 @@ export class HomePage {
         animal.reproduciendo = false;
       }
     }
+  }
 
+  public borrar_animal( idx:number){
+    this.animales.splice( idx, 1 );
   }
 
 }
