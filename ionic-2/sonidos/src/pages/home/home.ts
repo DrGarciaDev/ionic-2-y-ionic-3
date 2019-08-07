@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 //import { NavController } from 'ionic-angular';
 import { ANIMALES } from '../../data/data.animales';
 import { Animal } from '../../interfaces/animal.interface';
-
+import { Refresher } from 'ionic-angular';
 
 
 @Component({
@@ -60,7 +60,7 @@ export class HomePage {
     this.animales.splice( idx, 1 );
   }
 
-  public recargar_animales( refresher:any ){
+  public recargar_animales( refresher:Refresher ){
     console.log('inicio del refresh');
 
     setTimeout( ()=>{
