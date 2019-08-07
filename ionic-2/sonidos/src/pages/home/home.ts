@@ -60,4 +60,14 @@ export class HomePage {
     this.animales.splice( idx, 1 );
   }
 
+  public recargar_animales( refresher:any ){
+    console.log('inicio del refresh');
+
+    setTimeout( ()=>{
+      this.animales = ANIMALES.slice(0);
+      console.log('Termino el refresh');
+
+      refresher.complete();
+    }, 1500);
+  }
 }
