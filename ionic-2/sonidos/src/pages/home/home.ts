@@ -12,23 +12,49 @@ import { Animal } from '../../interfaces/animal.interface';
 export class HomePage {
 
   animales:Animal[] = [];
+  audio = new Audio();
+  audioTiempo: any;
 
   constructor() {
-    this.animales = ANIMALES.slice(0);
+    this.animales = ANIMALES.splice(0);
   }
 
+  // Funcion para reproducir audio desde los botones del home
   reproducir( animal:Animal ){
     
-    console.log( animal );
+    this.pausar_audio( animal );
 
-    let audio = new Audio();
-    audio.src = animal.audio;
+    if ( animal.reproduciendo == true) {
+      animal.reproduciendo = false;
+      // console.log('audio pausado');
+      return;
+    }
 
-    audio.load();
-    audio.play();
+    // console.log( animal );
+
+    // let audio = new Audio();
+    this.audio.src = animal.audio;
+
+    this.audio.load();
+    this.audio.play();
 
     animal.reproduciendo = true;
 
-    setTimeout( ()=> animal.reproduciendo = false, animal.duracion * 1000 );
+    this.audioTiempo = setTimeout( ()=> animal.reproduciendo = false, animal.duracion * 1000 );
   }
+
+  private pausar_audio( animalSel:Animal ){
+    clearTimeout ( this.audioTiempo );
+
+    this.audio.pause();
+    this.audio.currentTime = 0;
+
+    for( let animal of this.animales ){
+      if ( animal.nombre != animalSel.nombre ) {
+        animal.reproduciendo = false;
+      }
+    }
+
+  }
+
 }
