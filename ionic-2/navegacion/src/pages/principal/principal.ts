@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Pagina2Page } from '../pagina2/pagina2';
+import { Pagina2Page } from '../index.paginas';
 
 /**
  * Generated class for the PrincipalPage page.
@@ -24,7 +24,7 @@ export class PrincipalPage {
   // Crea una variable de tipo any
   pagina2:any = Pagina2Page;
 
-  public navegar_pagina(){
+  navegar_pagina(){
     this.navCtrl.push( Pagina2Page );
   }
 
