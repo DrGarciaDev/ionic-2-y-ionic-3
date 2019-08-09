@@ -1,5 +1,5 @@
 Si ya se tiene instalado ionic superior al 3.9.2 que es superior al del curso, 
-se puede desinstalar la versión superior como administrador con: 
+se puede desinstalar la versiÃ³n superior como administrador con: 
 
 	npm uninstall -g ionic
 
@@ -7,16 +7,16 @@ e instalar el 3.9.2 con
  
 	npm install -g ionic@3.9.2
 
-Por razones que desconozco, se producían errores al tratar de crear una aplicación con ionic 3.9.2
-por lo que desisntalé con 
+Por razones que desconozco, se producÃ­an errores al tratar de crear una aplicaciÃ³n con ionic 3.9.2
+por lo que desisntalÃ© con 
 
 	npm uninstall -g ionic
 
-e hice una instalación con 
+e hice una instalaciÃ³n con 
 
 	npm install -g ionic cordova
 
-Pedí una lista de las versiones instaladas
+PedÃ­ una lista de las versiones instaladas
 
 	ionic info
 	[WARN] You are not in an Ionic project directory. Project context may be missing.
@@ -36,11 +36,11 @@ Pedí una lista de las versiones instaladas
 		npm    : 6.9.0
 		OS     : Windows 10
 
-En el directorio donde se crearía la aplicación ejecuté el comando
+En el directorio donde se crearÃ­a la aplicaciÃ³n ejecutÃ© el comando
 
 	ionic start myApp tabs --type=ionic-angular
 
-entré a myApp y ejecuté: 
+entrÃ© a myApp y ejecutÃ©: 
 
 	ionic serve
 
@@ -56,9 +56,9 @@ para generara las carpetas de la plataforma para android se usa el siguiente com
 
 	ionic cordova platform add android
 
-Para los casos en los que se tienen errores de instalación de la plataforma, 
-el tutor sugiere utilizar comandos para corregir errores, a manera de reinicio de la instalación 
-o creación de las carpetas de la plataforma android:
+Para los casos en los que se tienen errores de instalaciÃ³n de la plataforma, 
+el tutor sugiere utilizar comandos para corregir errores, a manera de reinicio de la instalaciÃ³n 
+o creaciÃ³n de las carpetas de la plataforma android:
 
 	ionic cordova platform remove android
 	ionic cordova platform add android@6.4.0
@@ -69,16 +69,16 @@ Se instala cordova-res porque dio errores y se sugiere en consola instalarlo
 	npm i -g cordova-res
 	ionic cordova resources android --force
 
-Comandos para cambiar a la versión Pro y a la Legacy
+Comandos para cambiar a la versiÃ³n Pro y a la Legacy
 
-Asegurémonos de trabajar con la versión PRO
+AsegurÃ©monos de trabajar con la versiÃ³n PRO
 
 Ejecuten este comando como ROOT, SuperUsuario o Administrador
 
 	ionic config set -g backend pro 
 
 
-En caso que por alguna razón necesiten la versión legacy (vieja) de ionic, ejecuten este comando como ROOT, Super Usuario o Administrador
+En caso que por alguna razÃ³n necesiten la versiÃ³n legacy (vieja) de ionic, ejecuten este comando como ROOT, Super Usuario o Administrador
 
 	ionic config set -g backend legacy 
 
@@ -94,8 +94,15 @@ SE INSTALAN LOS SIGUIENTES PAQUETES PARA TRATAR DE SOLUCIONAR EL ERROR AL TRATAR
 	npm install --global --production windows-build-tools
 	npm install --global node-gyp
 
-DESPUÉS DE CORRER LOS ANTERIORES COMANDOS PUDE CREAR EL PROYECTO CON IONIC 3, SIN EMBARGO AL CORRER EL SERVIDOR CON
+DESPUÃ‰S DE CORRER LOS ANTERIORES COMANDOS PUDE CREAR EL PROYECTO CON IONIC 3, SIN EMBARGO AL CORRER EL SERVIDOR CON
 	ionic serve
 
-LOS CAMBIOS NO SE REFLEJABAN EN TIEMPO REAL, Y BUSCANDO EN DISTINTAS PREGUNTAS Y RESPUESTAS ENCONTRÉ QUE HAY OTRA MANERA DE CORRER EL SERVIDOR
+LOS CAMBIOS NO SE REFLEJABAN EN TIEMPO REAL, Y BUSCANDO EN DISTINTAS PREGUNTAS Y RESPUESTAS ENCONTRÃ‰ QUE HAY OTRA MANERA DE CORRER EL SERVIDOR
 	npm run ionic:serve
+
+CUANDO NO CORRE ionic serve SE PUEDE INSTALAR LOS PAQUETES FALTANTES CON 
+	npm install -g @ionic/app-scripts
+	npm install -g @ionic/lab
+
+PERO TAMBIÃ‰N SE PUEDE INSTALAR DE MANERA LOCAL EN LA CARPETA DEL PROYECTO
+	npm install @ionic/app-scripts
