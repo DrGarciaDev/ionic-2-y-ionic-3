@@ -1,16 +1,16 @@
 PREGUNTA CON RESPUESTA UTIL
 	Es posible trabajar con Entornos Virtuales de Node como en Python?
-	Cristian Javier · Clase 5
-	· hace 11 días
+	Cristian Javier Â· Clase 5
+	Â· hace 11 dÃ­as
 
-	Vengo de trabajar, de hecho lo sigo haciendo, con Python. En Python existe el concepto de "Entornos Virtuales de Python" en los cuales 	uno puede aislar cada proyecto (carpeta) en un entorno aislado con su correspondiente versión de Python y paquetes particulares. Lo cual 	permite dejar la instalacion global de Python del SO instacta y probar nuevas versiones o seguir trabajando con versiones de paquetes 	distintos sin hacer migraciones que pueden derivar en errores.
+	Vengo de trabajar, de hecho lo sigo haciendo, con Python. En Python existe el concepto de "Entornos Virtuales de Python" en los cuales 	uno puede aislar cada proyecto (carpeta) en un entorno aislado con su correspondiente versiÃ³n de Python y paquetes particulares. Lo cual 	permite dejar la instalacion global de Python del SO instacta y probar nuevas versiones o seguir trabajando con versiones de paquetes 	distintos sin hacer migraciones que pueden derivar en errores.
 
-	Hay alguna forma en Node, me imagino que si, de trabajar con entornos virtuales de Node o de hacer lo mismo de otra forma? Veo que hay un 	packaje.json en el proyecto que tiene información de los paquetes instalados pero hablo desde una perpectiva de instalacion a nivel de 	carpeta y no global.
+	Hay alguna forma en Node, me imagino que si, de trabajar con entornos virtuales de Node o de hacer lo mismo de otra forma? Veo que hay un 	packaje.json en el proyecto que tiene informaciÃ³n de los paquetes instalados pero hablo desde una perpectiva de instalacion a nivel de 	carpeta y no global.
 
-	Lo pienso para poder tener instalado la ultima versión de node e ionic por ejemplo a nivel global para ver sus últimas características y 	en la carpeta del proyecto instalar la versión de ionic que necesitamos, la 3.9.2, como sugiere Fernando, y trabajar con ella para seguir 	el curso de forma mas fluida.
+	Lo pienso para poder tener instalado la ultima versiÃ³n de node e ionic por ejemplo a nivel global para ver sus Ãºltimas caracterÃ­sticas y 	en la carpeta del proyecto instalar la versiÃ³n de ionic que necesitamos, la 3.9.2, como sugiere Fernando, y trabajar con ella para seguir 	el curso de forma mas fluida.
 	Jose Cardenas
 	
-	Jose — Profesor asistente · hace 10 días
+	Jose â€” Profesor asistente Â· hace 10 dÃ­as
 
 	Hola Cristian.
 
@@ -22,7 +22,7 @@ PREGUNTA CON RESPUESTA UTIL
 	
 	    npm install -g ionic@latest
 
-De esta manera podrás tener la version 3.9.2 de manera local para el proyecto y la última versión de manera global.
+De esta manera podrÃ¡s tener la version 3.9.2 de manera local para el proyecto y la Ãºltima versiÃ³n de manera global.
 
 Saludos.
 
@@ -30,11 +30,11 @@ Saludos.
 ************************************************************************************************************************************************
 
 JH
-******************SOLUCIÓN a los que no pueden levantar el app****************
-Jesús Fonseca · Clase 36
-· hace 2 meses
+******************SOLUCIÃ“N a los que no pueden levantar el app****************
+JesÃºs Fonseca Â· Clase 36
+Â· hace 2 meses
 
-Explicación:
+ExplicaciÃ³n:
 
 ejecute los siguientes comandos y listo:
 
@@ -47,8 +47,40 @@ ionic serve
 LISTO.
 
 Jose Cardenas
-Jose — Profesor asistente · hace 2 meses
+Jose â€” Profesor asistente Â· hace 2 meses
 
-Hola Jesús.
+Hola JesÃºs.
 
-Excelente, gracias por compartir esta solución. 
+Excelente, gracias por compartir esta soluciÃ³n. 
+
+
+*****************************************************************************************************************************
+
+BS
+Version NodeJs Y Angular Cli
+Brayan Â· Clase 5
+Â· hace 3 meses
+
+Hola, Cuando voy a correr la aplicacion me aparece el siguiente error
+
+Error: Cannot find module 'E:\ionic\myApp\node_modules\@ionic\app-scripts'
+
+Buscando en internet me sale que es por la version del node o del angular. asi que quisiera saber la version exacta del node y del angular. o como podria solucionar este error gracias.
+
+Fernando Herrera
+Fernando â€” Instructor Â· hace 3 meses
+
+Puedes probar instalando esto Brayan?
+
+	npm i @ionic/app-scripts
+
+****************************************************************************************************************************
+
+Hola Nelson.
+
+En cuanto a ionic, el CLI version 5 en teorÃ­a, aun soporta ionic framework 3. No deberÃ­as tener problemas para crear tu proyecto:
+
+ionic start myApp --type=ionic-angular
+
+
+*****************************************************************************************************************************
