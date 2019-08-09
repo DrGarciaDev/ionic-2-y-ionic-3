@@ -23,4 +23,11 @@ export class Pagina3Page {
 
   mutante:any = {};
 
+  ir_atras(){
+    this.navCtrl.pop();
+  }
+
+  ir_root(){
+    this.navCtrl.popToRoot();
+  }
 }
