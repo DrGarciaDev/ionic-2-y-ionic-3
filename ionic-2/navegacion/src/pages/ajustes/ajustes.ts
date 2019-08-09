@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
+ * @author Luis Alberto García Rodríguez
  */
 
 @IonicPage()
@@ -18,8 +19,8 @@ export class AjustesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AjustesPage');
+  activar_principal(){
+    this.navCtrl.parent.select(2);
   }
 
 }
