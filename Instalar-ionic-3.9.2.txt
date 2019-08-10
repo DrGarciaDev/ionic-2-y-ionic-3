@@ -105,3 +105,28 @@ CUANDO NO CORRE ionic serve SE PUEDE INSTALAR LOS PAQUETES FALTANTES CON
 
 PERO TAMBIÉN SE PUEDE INSTALAR DE MANERA LOCAL EN LA CARPETA DEL PROYECTO
 	npm install @ionic/app-scripts
+
+
+DEBIDO A TANTOS PROBLEMAS CON LAS CONFIGURACIONES, DESINSTALÉ IONIC GLOBAL EN SU VERSIÓN 3.9.2 
+E INSTALÉ LA 4.12.0 COMO LO DESCRIBO EN EL ARCHIVO "posible-solucion-problema-de-versiones" PARA PODER HACER UN BUILD 
+YA QUE CON LA VERSION ANTERIOR DE IONIC 3.9.2 NO SE PODÍA GENERAR ADECUADAMENTE
+
+SIN EMBARGO AL HACER
+	ionic cordova platform remove android
+	ionic cordova platform add android
+	ionic cordova build android
+
+Me daba el error 
+
+* What went wrong:
+Execution failed for task ':app:processDebugManifest'.
+> Manifest merger failed : uses-sdk:minSdkVersion 16 cannot be smaller than version 19 declared in library [:CordovaLib] C:\CURSOS_VARIOS\UDEMY\ionic-2-y-ionic-3\ionic-2\navegacion\platforms\android\CordovaLib\build\intermediates\library_manifest\debug\AndroidManifest.xml as the library might be using APIs not available in 16
+        Suggestion: use a compatible library with a minSdk of at most 16,
+                or increase this project's minSdk version to at least 19,
+                or use tools:overrideLibrary="org.apache.cordova" to force usage (may lead to runtime failures)
+
+Y después de mucho intentar, eliminar y volver a crear la plataforma para android, encontré que en el archivo "navegacion\platforms\gradle.properties" 
+
+la linea 4 establecía 16 como minimo sdk, lo cambié por 19 como se muestra, realicé de nuevo el build y con eso fue suficiente.
+
+cdvMinSdkVersion=19
