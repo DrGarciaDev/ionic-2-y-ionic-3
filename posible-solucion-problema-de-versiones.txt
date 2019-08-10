@@ -1,0 +1,125 @@
+CABE SEÑALAR QUE ESTOS COMANDOS SE EJECUTARON EN UNA MAQUINA VIRTUAL CON WINDOWS 10 
+
+Instalar nvm para windows version, verificado con el comando 
+	
+	nvm version
+  1.1.7
+	nvm list
+
+  * 10.16.0 (Currently using 64-bit executable)
+
+
+tener la versión instalada de node 
+	
+	node -v
+  v10.16.0
+
+
+Solo por curiosidad y comprobar que la instalación sería limpia ejecuté los comandos:
+
+	C:\Windows\system32>angular -v
+	"angular" no se reconoce como un comando interno o externo,
+	programa o archivo por lotes ejecutable.
+
+	C:\Windows\system32>ionic -v
+	"ionic" no se reconoce como un comando interno o externo,
+	programa o archivo por lotes ejecutable.
+
+
+Ejecuté la instalación de ionic pero especificamente en su versión 4.12.0 con el comando:
+
+	npm install -g ionic@4.12.0
+
+Después de que se instaló coorectamente me posicioné con el comando cd en la carpeta en la cual crearía dos proyectos 
+o apps de prueba en dos versiones distintas de ionic
+
+
+Para empezar creé  la aplicación para ionic 4 o especificamente la 4.12.0
+
+	ionic start io412 tabs
+
+
+Se instalaron los paquetes necesarios automáticamente y posicionado con el comando cd en la carpeta de la aplicación ejecuté el comando:
+
+	ionic serve -l -c
+
+
+Pregunta si deseamos instalar ionic lab debido a que requerimos el lab en el comando anterior con -l a los cual hay que decirle que yes
+
+
+*****************************************************************************************************************************************
+
+Después de que se guardaron todas las dependencias y corrió la aplicación de la versión 4.12.0, se continuó con la creación 
+de la aplicación para la versión 3 con el comando:
+
+	ionic start ion392 tabs --type=ionic-angular
+
+pregunta que si quieres instalar el sdk de ionic appflow a lo que yo le dije que no y continué
+
+Después de posicionarme con el comando cd en la carpeta de la aplicación creada, ejecuté el siguiente comando 
+para levantar el servidor de ionic y el lab
+
+	ionic serve -l -c
+
+
+Después pregunta automáticamente si deseas instalar el ionic lab a lo que hay que decirle que si
+
+Con esto es muy posible que se puedan tener por decirlo de alguna manera distintas versiones de ionic 
+o dicho de otra manera, crear proyectos de distintas versiones de ionic
+
+******************************************************************************************************************************************
+
+Por último, para comprobar la instalación global y las de carpetas ejecuté el comando ionic info en distintas carpetas:
+
+
+{---------------------------------------------------------------------------------------------------------
+C:\CURSOS\UDEMY\IONIC\io412>ionic info
+
+Ionic:
+
+   ionic (Ionic CLI)             : 4.12.0 (C:\NVM-FOR-WINDOWS\nvm\v10.16.0\node_modules\ionic)
+   Ionic Framework               : @ionic/angular 4.7.4
+   @angular-devkit/build-angular : 0.801.3
+   @angular-devkit/schematics    : 8.1.3
+   @angular/cli                  : 8.1.3
+   @ionic/angular-toolkit        : 2.0.0
+
+System:
+
+   NodeJS : v10.16.0 (C:\Program Files\nodejs\node.exe)
+   npm    : 6.9.0
+   OS     : Windows 10
+----------------------------------------------------------------------------------------------------------}
+
+
+{---------------------------------------------------------------------------------------------------------
+C:\CURSOS\UDEMY\IONIC\ion392>ionic info
+
+Ionic:
+
+   ionic (Ionic CLI)  : 4.12.0 (C:\NVM-FOR-WINDOWS\nvm\v10.16.0\node_modules\ionic)
+   Ionic Framework    : ionic-angular 3.9.5
+   @ionic/app-scripts : 3.2.2
+
+System:
+
+   NodeJS : v10.16.0 (C:\Program Files\nodejs\node.exe)
+   npm    : 6.9.0
+   OS     : Windows 10
+---------------------------------------------------------------------------------------------------------}
+
+
+{---------------------------------------------------------------------------------------------------------
+C:\CURSOS\UDEMY>ionic info
+[WARN] You are not in an Ionic project directory. Project context may be missing.
+
+Ionic:
+
+   ionic (Ionic CLI) : 4.12.0
+
+System:
+
+   NodeJS : v10.16.0
+   npm    : 6.9.0
+   OS     : Windows 10
+---------------------------------------------------------------------------------------------------------}
