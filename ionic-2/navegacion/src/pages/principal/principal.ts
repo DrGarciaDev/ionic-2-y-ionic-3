@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 import { Pagina2Page } from '../index.paginas';
 
@@ -18,7 +18,9 @@ import { Pagina2Page } from '../index.paginas';
 })
 export class PrincipalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public menuCtrl: MenuController) {
   }
 
   // Crea una variable de tipo any
@@ -26,6 +28,10 @@ export class PrincipalPage {
 
   navegar_pagina(){
     this.navCtrl.push( Pagina2Page );
+  }
+
+  mostrar_menu(){
+    this.menuCtrl.toggle();
   }
 
 }
