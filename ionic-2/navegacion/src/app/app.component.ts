@@ -5,13 +5,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { HomePage } from '../pages/home/home';
 // import { PrincipalPage } from '../pages/index.paginas';
-import { TabsPage } from '../pages/index.paginas';
+import { TabsPage, Ajustes2Page } from '../pages/index.paginas';
+
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   // rootPage:any = PrincipalPage;
+  tabs = TabsPage;
+  ajustes2 = Ajustes2Page;
+
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -21,6 +26,10 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+  abrir_pagina( pagina:any){
+    this.rootPage = pagina;
   }
 }
 
